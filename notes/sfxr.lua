@@ -1,0 +1,19 @@
+notes =
+{
+	love.audio.newSound("sounds/sfxr-beep1.wav"),
+	love.audio.newSound("sounds/sfxr-beep2.wav"),
+	love.audio.newSound("sounds/sfxr-beep3.wav"),
+	love.audio.newSound("sounds/sfxr-beep4.wav"),
+	love.audio.newSound("sounds/sfxr-coin1.wav"),
+	love.audio.newSound("sounds/sfxr-coin2.wav"),
+	love.audio.newSound("sounds/sfxr-coin3.wav"),
+	love.audio.newSound("sounds/sfxr-coin4.wav"),
+	love.audio.newSound("sounds/sfxr-explosion1.wav"),
+	love.audio.newSound("sounds/sfxr-explosion2.wav"),
+	love.audio.newSound("sounds/sfxr-explosion3.wav"),
+	love.audio.newSound("sounds/sfxr-explosion4.wav"),
+	love.audio.newSound("sounds/sfxr-laser1.wav"),
+	love.audio.newSound("sounds/sfxr-laser2.wav"),
+	love.audio.newSound("sounds/sfxr-laser3.wav"),
+	love.audio.newSound("sounds/sfxr-laser4.wav"),
+}

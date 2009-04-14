@@ -1,0 +1,19 @@
+notes =
+{
+	love.audio.newSound("sounds/"),
+	love.audio.newSound("sounds/"),
+	love.audio.newSound("sounds/"),
+	love.audio.newSound("sounds/"),
+	love.audio.newSound("sounds/"),
+	love.audio.newSound("sounds/"),
+	love.audio.newSound("sounds/"),
+	love.audio.newSound("sounds/"),
+	love.audio.newSound("sounds/"),
+	love.audio.newSound("sounds/"),
+	love.audio.newSound("sounds/"),
+	love.audio.newSound("sounds/"),
+	love.audio.newSound("sounds/"),
+	love.audio.newSound("sounds/"),
+	love.audio.newSound("sounds/"),
+	love.audio.newSound("sounds/"),
+}
