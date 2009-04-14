@@ -19,6 +19,12 @@ Author = {
 	email = "qubodup@gmail.com",
 }
 
+Credits = {
+	"sfxr* sound files made in sfxr",
+	"code written in vim",
+	"deployed via Git and GitHub",
+	}
+
 License = {
 	Code = {
 		name = "zlib license",
