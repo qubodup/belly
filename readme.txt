@@ -23,6 +23,7 @@ Credits = {
 	"sfxr* sound files made in sfxr",
 	"code written in vim",
 	"deployed via Git and GitHub",
+	"inspired by tonematrix",
 	}
 
 License = {
