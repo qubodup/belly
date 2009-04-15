@@ -24,6 +24,7 @@ Credits = {
 	"code written in vim",
 	"deployed via Git and GitHub",
 	"inspired by tonematrix",
+	"saving/loading by bartbes",
 	}
 
 License = {
