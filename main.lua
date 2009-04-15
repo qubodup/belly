@@ -1,3 +1,33 @@
+function exporttable(t)
+	local s = "table =\n{\n"
+	for row, r in ipairs(t) do
+		s = s .. "\t{"
+		for column, v in ipairs(r) do
+			s = s .. v .. ","
+		end
+		s = s .. "},\n"
+	end
+	s = s .. "}"
+	return s
+end
+
+function savetable(f)
+	love.filesystem.write("save" .. f .. ".bly", exporttable(table))
+end
+
+function loadtable(f)
+	if not love.filesystem.exists("save" .. f .. ".bly") then return end
+	love.filesystem.include("save" .. f .. ".bly")
+end
+
+function loadsave(f)
+	if savemode == "save" then
+		savetable(f)
+	elseif savemode == "load" then
+		loadtable(f)
+	end
+end
+
 function load()
 
 	love.filesystem.require("tables/nice.lua") -- start table
@@ -28,6 +58,7 @@ function load()
 	help = false -- controls help showing
 	helpUsed = false -- controls help help showing
 	love.graphics.setFont(love.default_font)
+	savemode = ""
 end
 
 function update(dt)
@@ -66,6 +97,7 @@ function draw()
 	love.graphics.setColor(text) -- set color to help text black
 	if helpUsed == false then love.graphics.draw("help/hide this: hold H", 16, 26) end -- draw help help the first 4 seconds
 	if help then love.graphics.draw("enable/disable: Mouse Button (Left)\nincrease/decrease: Mouse Wheel Up/Down\nclear: Backspace\nmaster volume: +/-\nquit: Q, Esc",16,26) end
+	if savemode ~= "" then love.graphics.draw("press function key to save (F1-F12) to that slot", 16, 26) end
 end
 
 function updateCursorField()
@@ -121,6 +153,51 @@ function keypressed(key)
 		volume = volume - .1
 		love.audio.setVolume(volume)
 		print(volume)
+	elseif key == love.key_f1 then
+		loadsave(1)
+		savemode = ""
+	elseif key == love.key_f2 then
+		loadsave(2)
+		savemode = ""
+	elseif key == love.key_f3 then
+		loadsave(3)
+		savemode = ""
+	elseif key == love.key_f4 then
+		loadsave(4)
+		savemode = ""
+	elseif key == love.key_f5 then
+		loadsave(5)
+		savemode = ""
+	elseif key == love.key_f6 then
+		loadsave(6)
+		savemode = ""
+	elseif key == love.key_f7 then
+		loadsave(7)
+		savemode = ""
+	elseif key == love.key_f8 then
+		loadsave(8)
+		savemode = ""
+	elseif key == love.key_f9 then
+		loadsave(9)
+		savemode = ""
+	elseif key == love.key_f10 then
+		loadsave(10)
+		savemode = ""
+	elseif key == love.key_f11 then
+		loadsave(11)
+		savemode = ""
+	elseif key == love.key_f12 then
+		loadsave(12) 
+		savemode = ""
+	else
+		savemode = ""
+	end
+	if key == love.key_l then
+		helpUsed = true
+		savemode = "load"
+	elseif key == love.key_s then
+		helpUsed = true
+		savemode = "save"
 	end
 end
 
