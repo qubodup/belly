@@ -96,7 +96,7 @@ function draw()
 	-- help and help help drawing
 	love.graphics.setColor(text) -- set color to help text black
 	if helpUsed == false then love.graphics.draw("help/hide this: hold H", 16, 26) end -- draw help help the first 4 seconds
-	if help then love.graphics.draw("enable/disable: Mouse Button (Left)\nincrease/decrease: Mouse Wheel Up/Down\nclear: Backspace\nmaster volume: +/-\nquit: Q, Esc",16,26) end
+	if help then love.graphics.draw("enable/disable: Mouse Button (Left)\nincrease/decrease: Mouse Wheel Up/Down\nclear: Backspace\nmaster volume: +/-\nquit: Q, Esc\nsave/load to ./love/belly: s/l",16,26) end
 	if savemode ~= "" then love.graphics.draw("press function key to save (F1-F12) to that slot", 16, 26) end
 end
 
